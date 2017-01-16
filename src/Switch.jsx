@@ -49,11 +49,11 @@ const Switch = React.createClass({
         checked,
       });
     }
-    this.props.onChange(checked);
+    this.props.onChange(checked, e);
   },
-  toggle() {
+  toggle(e) {
     const checked = !this.state.checked;
-    this.setChecked(checked);
+    this.setChecked(checked, e);
   },
   handleKeyDown(e) {
     if (e.keyCode === 37) {
